@@ -1,4 +1,4 @@
-i#include "lists.h"
+#include "lists.h"
 /**
  * @head: head of a list.
  * @number: index of the list where the new node is
