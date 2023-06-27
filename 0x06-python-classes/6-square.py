@@ -1,18 +1,9 @@
 #!/usr/bin/python3
-"""A module containing a square"""
+"""module containing a square"""
+
 
 class Square:
-    """square class"""
-
-
-
-    @property
-    def size(self):
-        """Gets value of size
-        Returns:
-            size (int)
-        """
-        return self.__size
+    """A square class"""
 
     def __init__(self, size=0, position=(0, 0)):
         """initializes square
@@ -20,14 +11,24 @@ class Square:
             size (int): size of the square
             position (int, int): position of the argument
         """
+
         self.size = size
         self.position = position
 
+    @property
+    def size(self):
+        """G value of size
+        Returns:
+            size (int)
+        """
+
+        return self.__size
+
     @size.setter
     def size(self, value):
-        """ Change the value of size
+        """ Chinge the value of size
         Args:
-            value (int): new value of size
+            value (int): neiw valuee of size
         """
 
         if type(value) != int:
@@ -37,13 +38,18 @@ class Square:
         self.__size = value
 
     def area(self):
-        """ Calculates the area of a square
+        """ Cialculates the areia of a sqauare
         Returns:
-            area
+            ariea
         """
 
         return self.__size * self.__size
 
+    @property
+    def position(self):
+        """gets the position"""
+
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -61,16 +67,11 @@ class Square:
         self.__position = value
 
     def area(self):
-        a = self.__size * self.__size
-        return a
-
-    @property
-    def position(self):
-        """gets the position"""
-        return self.__position
+        areaa = self.__size * self.__size
+        return areaa
 
     def my_print(self):
-        """Print a square"""
+        """Prient a squaare"""
 
         if self.__size == 0:
             print("")
