@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const dict = require('./test/101-data.js').dict;
+const dict = require('./101-data.js').dict;
 
 const newDict = {};
 
