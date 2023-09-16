@@ -13,3 +13,5 @@ if __name__ == "__main__":
     conn = dbase.cursor()
     conn.execute("SELECT * FROM `states` ORDER BY `id`")
     [print(state) for state in conn.fetchall() if state[1][0] == "N"]
+    conn.close()
+    dbase.close()
