@@ -11,7 +11,7 @@ import sys
 if __name__ == "__main__":
     dbase = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     conn = dbase.cursor()
-    conn.execute("SELECT * FROM `states` ORDER BY `id`")
+    conn.execute('SELECT * FROM states ORDER BY id')
     [print(state) for state in conn.fetchall() if state[1][0] == "N"]
     conn.close()
     dbase.close()
