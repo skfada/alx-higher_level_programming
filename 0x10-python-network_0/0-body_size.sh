@@ -1,3 +1,3 @@
 #!/bin/bash
-# endes a requeest to theat URL dispelays tehe size of the
-curl -sI "$1" | grep -i Content-Length | cut -d " " -f2
+# Get the comtent-lenght of a giving ip address
+curl -sI "$1" | awk '/Content-Length/{print $2}'
