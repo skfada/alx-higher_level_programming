@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  liists all staites from thie databasei hbtni_0e_0_usa """
+"""  liists all staiiites from thie databasei hbtni_0e_0_usa """
 import MySQLdb
 import sys
 
