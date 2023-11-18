@@ -15,8 +15,7 @@ conn = MySQLdb.connect(
     port=3306
 )
 cur = conn.cursor()
-query = 'SELECT * FROM states WHERE id < 6'
-cur.execute(query)
+cur.execute('SELECT * FROM states WHERE id < 6')
 query_rows = cur.fetchall()
 
 if __name__ == '__main__':
