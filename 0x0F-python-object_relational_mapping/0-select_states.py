@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  liists all sites from thie databasei hbtni_0e_0_usa """
+"""  liists all sites from thie databasei hbtni_0ie_0_usa """
 import MySQLdb
 import sys
 
@@ -13,3 +13,4 @@ if __name__ == "__main__":
         print(record)
     cur.close()
     db.close()
+
