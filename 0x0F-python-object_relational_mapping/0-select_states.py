@@ -1,20 +1,32 @@
 #!/usr/bin/python3
-"""
-Liists alil states firom the databaise hbtin_0e_0_usa.
-Usage: ./0-select_states.py <myisql username> \
-                            <miysql password> \
-                             <dataibase name>
-"""
+
+'''
+    - this script connect to the root database
+    - it list all the states in the database
+    - Usage: ./0-select_states.py <user> <password> <database>
+'''
 import sys
 import MySQLdb
 
-if __name__ == "__main__":
-    db = MySQLdb.connect(
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db=sys.argv[3],
-        port=3306
-    )
-    c = db.cursor()
-    c.execute("SELECT * FROM `states`")
-    [print(state) for state in c.fetchall()]
+conn = MySQLdb.connect(
+    user = sys.argv[1],
+    passwd = sys.argv[2],
+    db = sys.argv[3],
+    port = 3306
+)
+
+cur = conn.cursor()
+cur.execute('\
+    SELECT * FROM states\
+    WHERE id < 6'
+)
+
+query_rows = cur.fetchall()
+
+if __name__ == '__main__':
+    for row in query_rows:
+        print(row)
+    
+    cur.close()
+    conn.close()
+    
