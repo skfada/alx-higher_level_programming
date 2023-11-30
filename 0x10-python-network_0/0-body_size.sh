@@ -1,4 +1,4 @@
 #!/bin/bash
-# Sending a GET request and storing the response body in a variable
-echo -n curl -s $1 | wc -c
+# Script that shows the Content-Length from a HTTP request
+curl -sI "$1" | grep "Content-Length:" | cut -d " " -f 2
 
